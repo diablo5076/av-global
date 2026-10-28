@@ -1,0 +1,17 @@
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+scratch/
+scratch_*
+kitchen_backup/
+
+# Environment / local development
+.env
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Large raw archive/catalogue pdfs (optional, if you do not want to push heavy PDF to git)
+# AV_Global_Exports_Brass_Marble_Catalogue.pdf
