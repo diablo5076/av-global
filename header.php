@@ -1,3 +1,8 @@
+<?php
+if (session_status() === PHP_SESSION_NONE && !headers_sent()) {
+    @session_start();
+}
+?>
 <header class="header-section-2">
     <div class="header-bottom-2">
         <div class="container-fluid">

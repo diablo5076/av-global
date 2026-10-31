@@ -55,7 +55,7 @@
                         <div class="detail-sidebar" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
                             <div class="detail-sidebar-inner">
                                 <div class="sidebar-widget" style="background: #ffffff; padding: 15px; border-radius: 16px; border: 1px solid rgba(212,175,55,0.25); box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
-                                    <img src="assets/img/catalogue_extracted/page_17_img_1_53.jpeg" style="width: 100%; border-radius: 12px; display: block;" alt="Heritage Embossed Water Jug">
+                                    <img src="assets/img/table-ware/12.jpg" style="width: 100%; border-radius: 12px; display: block;" alt="Heritage Embossed Water Jug">
                                     
                                     <!-- Mandatory Catalogue Styling Disclaimer Note (Section 6) -->
                                     <div style="margin-top: 15px; padding: 12px 14px; background: #fdfaf0; border-left: 3px solid #d4af37; border-radius: 4px; font-size: 11.5px; color: #64748b; line-height: 1.5;">

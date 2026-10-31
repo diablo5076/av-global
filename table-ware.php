@@ -7,23 +7,103 @@
 	<title>Tableware & Serveware - Anuvanshika Global Export Co</title>
 	<?php include 'assets.php' ?>
 	<style>
+		.project-card.style-service {
+			background: #ffffff !important;
+			border-radius: 12px !important;
+			border: 1px solid rgba(212,175,55,0.2) !important;
+			box-shadow: 0 4px 18px rgba(0,0,0,0.05) !important;
+			overflow: hidden !important;
+			transition: all 0.3s ease !important;
+			display: flex !important;
+			flex-direction: column !important;
+			height: 100% !important;
+		}
+		.project-card.style-service:hover {
+			box-shadow: 0 10px 28px rgba(212,175,55,0.25) !important;
+			transform: translateY(-4px) !important;
+		}
 		.project-card.style-service .thumb {
 			position: relative !important;
 			overflow: hidden !important;
-			border-radius: 10px !important;
+			background: #fbf9f5 !important;
+			border-radius: 12px 12px 0 0 !important;
+			width: 100% !important;
+		}
+		.project-card.style-service .thumb > a {
+			display: block !important;
+			width: 100% !important;
 		}
 		.project-card.style-service .thumb img {
 			width: 100% !important;
 			height: auto !important;
 			aspect-ratio: 435 / 500 !important;
-			object-fit: cover !important;
+			object-fit: contain !important;
 			object-position: center !important;
-			border-radius: 10px !important;
 			display: block !important;
-			transition: transform 0.6s ease !important;
+			transition: transform 0.5s ease !important;
 		}
 		.project-card.style-service:hover .thumb img {
-			transform: scale(1.03) !important;
+			transform: scale(1.04) !important;
+		}
+		.project-card.style-service .thumb .content {
+			position: relative !important;
+			bottom: auto !important;
+			left: auto !important;
+			width: 100% !important;
+			transform: none !important;
+			padding: 16px 18px 20px !important;
+			background: #ffffff !important;
+			border: none !important;
+			backdrop-filter: none !important;
+			border-radius: 0 !important;
+			display: flex !important;
+			flex-direction: column !important;
+			justify-content: space-between !important;
+			flex-grow: 1 !important;
+			overflow: visible !important;
+		}
+		.project-card.style-service .thumb .content h5 {
+			font-size: 15.5px !important;
+			font-weight: 700 !important;
+			line-height: 1.4 !important;
+			color: #0b1528 !important;
+			margin-bottom: 14px !important;
+			min-height: 44px !important;
+			display: -webkit-box !important;
+			-webkit-line-clamp: 2 !important;
+			-webkit-box-orient: vertical !important;
+			overflow: hidden !important;
+			transition: color 0.3s ease !important;
+		}
+		.project-card.style-service:hover .thumb .content h5 {
+			color: #b8860b !important;
+		}
+		.project-card.style-service .thumb .content .join-us {
+			position: relative !important;
+			bottom: auto !important;
+			margin-top: auto !important;
+			display: block !important;
+			opacity: 1 !important;
+			visibility: visible !important;
+		}
+		.project-card.style-service .thumb .content .join-us .e-primary-btn {
+			display: flex !important;
+			width: 100% !important;
+			align-items: center !important;
+			justify-content: center !important;
+			padding: 10px 18px !important;
+			font-size: 13.5px !important;
+			font-weight: 700 !important;
+			background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%) !important;
+			color: #0b1528 !important;
+			border-radius: 6px !important;
+			border: none !important;
+			box-shadow: 0 2px 8px rgba(212,175,55,0.3) !important;
+			transition: all 0.3s ease !important;
+		}
+		.project-card.style-service .thumb .content .join-us .e-primary-btn:hover {
+			background: #0b1528 !important;
+			color: #ffffff !important;
 		}
 	</style>
 </head>
@@ -228,7 +308,7 @@
 					<div class="col-xl-3 col-lg-4 col-md-6 col-12 m-b-30">
 						<div class="project-card style-service">
 							<div class="thumb">
-								<a href='ruffled-centrepiece-bowl.php'><img alt="Ruffled Centrepiece Bowl" src="assets/img/catalogue_extracted/page_06_img_2_20.jpeg"></a>
+								<a href='ruffled-centrepiece-bowl.php'><img alt="Ruffled Centrepiece Bowl" src="assets/img/table-ware/11.jpg"></a>
 								<div class="content">
 									<h5>Ruffled Centrepiece Bowl</h5>
 									<div class="join-us">
@@ -243,7 +323,7 @@
 					<div class="col-xl-3 col-lg-4 col-md-6 col-12 m-b-30">
 						<div class="project-card style-service">
 							<div class="thumb">
-								<a href='heritage-embossed-water-jug.php'><img alt="Heritage Embossed Water Jug" src="assets/img/catalogue_extracted/page_10_img_2_32.jpeg"></a>
+								<a href='heritage-embossed-water-jug.php'><img alt="Heritage Embossed Water Jug" src="assets/img/table-ware/12.jpg"></a>
 								<div class="content">
 									<h5>Heritage Embossed Water Jug</h5>
 									<div class="join-us">
@@ -258,7 +338,7 @@
 					<div class="col-xl-3 col-lg-4 col-md-6 col-12 m-b-30">
 						<div class="project-card style-service">
 							<div class="thumb">
-								<a href='aurelia-footed-goblets-pair.php'><img alt="Aurelia Footed Goblets (Pair)" src="assets/img/catalogue_extracted/page_11_img_2_35.jpeg"></a>
+								<a href='aurelia-footed-goblets-pair.php'><img alt="Aurelia Footed Goblets (Pair)" src="assets/img/table-ware/13.jpg"></a>
 								<div class="content">
 									<h5>Aurelia Footed Goblets (Pair)</h5>
 									<div class="join-us">
@@ -273,7 +353,7 @@
 					<div class="col-xl-3 col-lg-4 col-md-6 col-12 m-b-30">
 						<div class="project-card style-service">
 							<div class="thumb">
-								<a href='lumiere-hinged-round-box.php'><img alt="Lumière Hinged Round Box" src="assets/img/catalogue_extracted/page_16_img_2_50.jpeg"></a>
+								<a href='lumiere-hinged-round-box.php'><img alt="Lumière Hinged Round Box" src="assets/img/table-ware/14.jpg"></a>
 								<div class="content">
 									<h5>Lumière Hinged Round Box</h5>
 									<div class="join-us">
@@ -288,7 +368,7 @@
 					<div class="col-xl-3 col-lg-4 col-md-6 col-12 m-b-30">
 						<div class="project-card style-service">
 							<div class="thumb">
-								<a href='mandala-engraved-canister-set.php'><img alt="Mandala Engraved Canister Set" src="assets/img/catalogue_extracted/page_17_img_1_53.jpeg"></a>
+								<a href='mandala-engraved-canister-set.php'><img alt="Mandala Engraved Canister Set" src="assets/img/table-ware/15.jpg"></a>
 								<div class="content">
 									<h5>Mandala Engraved Canister Set</h5>
 									<div class="join-us">

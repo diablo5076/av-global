@@ -39,7 +39,7 @@
 										</div>
 									</div>
 									<div class="join-us" data-animation="animate__fadeInUp" data-delay="0.5s">
-										<a class='e-primary-btn has-icon' href='#'>
+										<a class='e-primary-btn has-icon' href='products.php'>
 											Discover More
 											<span class="icon-wrap">
 												<span class="icon">
@@ -1044,7 +1044,7 @@
 					<div class="col-xl-4 col-md-6 col-sm-12">
 						<div class="blog-card-2">
 							<div class="thumb">
-								<a href='#'>
+								<a href='about.php'>
 									<img alt="thumb-2" src="assets/img/blog/2.jpg">
 								</a>
 							</div>
@@ -1059,7 +1059,7 @@
 									</div>
 								</div>
 								<div class="content-bottom">
-									<a class='e-primary-btn has-icon read-more-btn has-small' href='#'>
+									<a class='e-primary-btn has-icon read-more-btn has-small' href='about.php'>
 										Read More
 										<span class="icon-wrap">
 											<span class="icon">
@@ -1075,7 +1075,7 @@
 					<div class="col-xl-4 col-md-6 col-sm-12">
 						<div class="blog-card-2">
 							<div class="thumb">
-								<a href='#'>
+								<a href='products.php'>
 									<img alt="thumb-3" src="assets/img/blog/3.jpg">
 								</a>
 							</div>
@@ -1090,7 +1090,7 @@
 									</div>
 								</div>
 								<div class="content-bottom">
-									<a class='e-primary-btn has-icon read-more-btn has-small' href='#'>
+									<a class='e-primary-btn has-icon read-more-btn has-small' href='about.php'>
 										Read More
 										<span class="icon-wrap">
 											<span class="icon">
