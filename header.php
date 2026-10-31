@@ -78,6 +78,119 @@ if (session_status() === PHP_SESSION_NONE && !headers_sent()) {
 </header>
 <!-- header-section end -->
 
+<!-- Inline guaranteed styling for header navigation dropdowns -->
+<style id="navbar-dropdown-fix">
+.main-menu-3 .has-dropdown {
+    position: relative !important;
+}
+.main-menu-3 .has-dropdown:hover > a:after {
+    transform: rotate(180deg) !important;
+    content: "\f068" !important;
+}
+.main-menu-3 .has-dropdown .sub-menu {
+    position: absolute !important;
+    left: 0 !important;
+    top: 100% !important;
+    margin-top: 10px !important;
+    width: max-content !important;
+    min-width: max-content !important;
+    max-width: calc(100vw - 40px) !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    white-space: normal !important;
+    background: #ffffff !important;
+    border-radius: 14px !important;
+    padding: 12px 18px !important;
+    margin-bottom: 0 !important;
+    list-style: none !important;
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.28), 0 2px 10px rgba(0, 0, 0, 0.08) !important;
+    border: 1px solid rgba(212, 175, 55, 0.35) !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transform: translateY(8px) !important;
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s !important;
+    z-index: 999999 !important;
+}
+@media (max-width: 1550px) {
+    .main-menu-3 ul li.has-dropdown:nth-child(4) .sub-menu,
+    .main-menu-3 ul li.has-dropdown:last-of-type .sub-menu {
+        left: auto !important;
+        right: -80px !important;
+    }
+}
+@media (max-width: 1399px) {
+    .main-menu-3 ul li.has-dropdown:nth-child(4) .sub-menu,
+    .main-menu-3 ul li.has-dropdown:last-of-type .sub-menu {
+        left: auto !important;
+        right: -130px !important;
+    }
+}
+.main-menu-3 .has-dropdown .sub-menu::before {
+    content: "" !important;
+    position: absolute !important;
+    top: -14px !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 16px !important;
+    background: transparent !important;
+    display: block !important;
+}
+.main-menu-3 .has-dropdown:hover > .sub-menu {
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: translateY(0) !important;
+}
+.main-menu-3 .sub-menu li {
+    display: flex !important;
+    align-items: stretch !important;
+    justify-content: center !important;
+    margin: 0 !important;
+    padding: 0 4px !important;
+    list-style: none !important;
+    flex: 0 0 auto !important;
+    width: auto !important;
+}
+.main-menu-3 .sub-menu li::before {
+    display: none !important;
+    content: none !important;
+}
+.main-menu-3 .sub-menu li a {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+    min-width: 110px !important;
+    max-width: 135px !important;
+    width: auto !important;
+    padding: 9px 12px !important;
+    color: #1e293b !important;
+    font-size: 13.5px !important;
+    font-weight: 500 !important;
+    line-height: 1.35 !important;
+    border-radius: 8px !important;
+    background: transparent !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    border: none !important;
+    transition: all 0.2s ease !important;
+}
+.main-menu-3 .sub-menu li a:hover {
+    background: #fbf7ee !important;
+    color: #b8860b !important;
+    font-weight: 600 !important;
+    padding-left: 12px !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 2px 8px rgba(184, 134, 11, 0.15) !important;
+}
+</style>
+
 <!-- off-canvas-menubar start -->
 <div class="off-canvas-menubar">
     <div class="off-canvas-menubar-body">
