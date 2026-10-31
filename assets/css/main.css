@@ -23594,7 +23594,7 @@ label {
   color: #d4af37 !important;
 }
 
-/* Luxury Dropdown Submenu Container */
+/* Luxury Dropdown Submenu Container - Extended Horizontal Layout */
 .main-menu-3 .has-dropdown {
   position: relative !important;
 }
@@ -23603,20 +23603,22 @@ label {
   position: absolute !important;
   left: 0 !important;
   top: 100% !important;
-  margin-top: 8px !important;
-  min-width: 275px !important;
+  margin-top: 10px !important;
   width: max-content !important;
-  max-width: 330px !important;
+  min-width: auto !important;
+  max-width: calc(100vw - 40px) !important;
   display: flex !important;
-  flex-direction: column !important;
+  flex-direction: row !important;
   flex-wrap: nowrap !important;
+  align-items: stretch !important;
+  justify-content: flex-start !important;
   white-space: normal !important;
   background: #ffffff !important;
-  border-radius: 12px !important;
-  padding: 8px 0 !important;
+  border-radius: 14px !important;
+  padding: 12px 16px !important;
   margin-bottom: 0 !important;
   list-style: none !important;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22), 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.22), 0 2px 10px rgba(0, 0, 0, 0.08) !important;
   border: 1px solid rgba(212, 175, 55, 0.28) !important;
   visibility: hidden !important;
   opacity: 0 !important;
@@ -23626,14 +23628,31 @@ label {
   z-index: 99999 !important;
 }
 
+/* Position adjustment for dropdowns toward the right (e.g. Products) */
+@media (max-width: 1550px) {
+  .main-menu-3 ul li.has-dropdown:nth-child(4) .sub-menu,
+  .main-menu-3 ul li.has-dropdown:last-of-type .sub-menu {
+    left: auto !important;
+    right: -80px !important;
+  }
+}
+
+@media (max-width: 1399px) {
+  .main-menu-3 ul li.has-dropdown:nth-child(4) .sub-menu,
+  .main-menu-3 ul li.has-dropdown:last-of-type .sub-menu {
+    left: auto !important;
+    right: -130px !important;
+  }
+}
+
 /* Invisible bridge so mouse does not leave hover when traveling down into submenu */
 .main-menu-3 .has-dropdown .sub-menu::before {
   content: "" !important;
   position: absolute !important;
-  top: -12px !important;
+  top: -14px !important;
   left: 0 !important;
   right: 0 !important;
-  height: 14px !important;
+  height: 16px !important;
   background: transparent !important;
   display: block !important;
 }
@@ -23645,14 +23664,16 @@ label {
   transform: translateY(0) !important;
 }
 
-/* Dropdown list items */
+/* Dropdown list items - horizontal side-by-side columns inside the extended white box */
 .main-menu-3 .sub-menu li {
-  display: block !important;
-  width: 100% !important;
+  display: flex !important;
+  align-items: stretch !important;
+  justify-content: center !important;
   margin: 0 !important;
-  padding: 0 !important;
+  padding: 0 4px !important;
   list-style: none !important;
-  text-align: left !important;
+  flex: 0 0 auto !important;
+  width: auto !important;
 }
 
 .main-menu-3 .sub-menu li::before {
@@ -23661,31 +23682,35 @@ label {
 }
 
 .main-menu-3 .sub-menu li a {
-  display: block !important;
-  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
   box-sizing: border-box !important;
+  min-width: 105px !important;
+  max-width: 130px !important;
+  width: auto !important;
+  padding: 8px 10px !important;
   color: #1e293b !important;
   font-size: 13.5px !important;
   font-weight: 500 !important;
-  line-height: 1.45 !important;
-  padding: 9px 20px !important;
-  border-radius: 0 !important;
+  line-height: 1.35 !important;
+  border-radius: 8px !important;
   background: transparent !important;
   white-space: normal !important;
-  text-align: left !important;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.04) !important;
+  word-break: normal !important;
+  border: none !important;
   transition: all 0.2s ease !important;
-}
-
-.main-menu-3 .sub-menu li:last-child a {
-  border-bottom: none !important;
 }
 
 .main-menu-3 .sub-menu li a:hover {
   background: #fbf7ee !important;
   color: #b8860b !important;
-  padding-left: 24px !important;
   font-weight: 600 !important;
+  padding-left: 10px !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 2px 8px rgba(184, 134, 11, 0.12) !important;
 }
 
 /* =========================================================
