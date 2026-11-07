@@ -24179,27 +24179,15 @@ label {
 }
 
 /* =========================================================
-   STRICT NO-ZOOM OVERRIDE FOR ABOUT SECTION
+   STRICT NO-ZOOM OVERRIDE FOR ABOUT SECTION (PRESERVES SLIDER TRANSFORMS)
    ========================================================= */
-.about-us-section .thumb,
-.about-us-section .thumb:hover,
-.about-us-section .shape-wrapped-thumb-2,
-.about-us-section .shape-wrapped-thumb-2:hover,
-.about-us-section .positioned-thumb,
-.about-us-section .positioned-thumb:hover,
-.about-us-section .about-slider-wrapper,
-.about-us-section .about-slider-wrapper:hover,
-.about-us-section .about-img-slider,
-.about-us-section .about-img-slider:hover,
-.about-us-section .about-img-slider .swiper-wrapper,
-.about-us-section .about-img-slider .swiper-slide,
-.about-us-section .about-img-slider .swiper-slide:hover,
 .about-us-section .about-img-slider .swiper-slide img,
 .about-us-section .about-img-slider .swiper-slide img:hover,
 .about-us-section .positioned-thumb img,
 .about-us-section .positioned-thumb:hover img,
 .about-us-section .thumb:hover .positioned-thumb img,
-.about-us-section .shape-wrapped-thumb-2:hover .positioned-thumb img {
+.about-us-section .shape-wrapped-thumb-2:hover .positioned-thumb img,
+.about-us-section .about-slider-wrapper:hover img {
 	transform: none !important;
 	-webkit-transform: none !important;
 	transition: none !important;
