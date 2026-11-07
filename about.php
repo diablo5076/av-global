@@ -5,6 +5,35 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 	<title>About Us -  Anuvanshika Global Export Co</title>
 	<?php include 'assets.php' ?>
+<style>
+		/* Force disable any zoom, scale or lift on About slider and image */
+		.about-us-section .thumb,
+		.about-us-section .shape-wrapped-thumb-2,
+		.about-us-section .positioned-thumb,
+		.about-us-section .about-slider-wrapper,
+		.about-us-section .about-img-slider,
+		.about-us-section .about-img-slider .swiper-slide,
+		.about-us-section .about-img-slider .swiper-slide img {
+			transform: none !important;
+			-webkit-transform: none !important;
+			transition: none !important;
+			-webkit-transition: none !important;
+			animation: none !important;
+		}
+		.about-us-section:hover .thumb img,
+		.about-us-section .thumb:hover img,
+		.about-us-section .shape-wrapped-thumb-2:hover img,
+		.about-us-section .positioned-thumb:hover img,
+		.about-us-section .about-slider-wrapper:hover img,
+		.about-us-section .about-img-slider:hover img,
+		.about-us-section .swiper-slide:hover img {
+			transform: none !important;
+			-webkit-transform: none !important;
+			transition: none !important;
+			-webkit-transition: none !important;
+			scale: 1 !important;
+		}
+</style>
 </head>
 <body>
 	<!-- header-section start -->

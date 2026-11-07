@@ -20,7 +20,7 @@
 
 <!-- Main CSS -->
 <link rel="stylesheet" href="assets/css/spacing.css" />
-<link rel="stylesheet" href="assets/css/main.css?v=20261107_01" />
+<link rel="stylesheet" href="assets/css/main.css?v=1794084086" />
 
 <!-- social icon -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">

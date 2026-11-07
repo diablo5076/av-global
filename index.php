@@ -63,6 +63,34 @@
 		.hero-slider-active-2 .services-2 .service p {
 			text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8) !important;
 		}
+		
+		/* Force disable any zoom, scale or lift on About slider and image */
+		.about-us-section .thumb,
+		.about-us-section .shape-wrapped-thumb-2,
+		.about-us-section .positioned-thumb,
+		.about-us-section .about-slider-wrapper,
+		.about-us-section .about-img-slider,
+		.about-us-section .about-img-slider .swiper-slide,
+		.about-us-section .about-img-slider .swiper-slide img {
+			transform: none !important;
+			-webkit-transform: none !important;
+			transition: none !important;
+			-webkit-transition: none !important;
+			animation: none !important;
+		}
+		.about-us-section:hover .thumb img,
+		.about-us-section .thumb:hover img,
+		.about-us-section .shape-wrapped-thumb-2:hover img,
+		.about-us-section .positioned-thumb:hover img,
+		.about-us-section .about-slider-wrapper:hover img,
+		.about-us-section .about-img-slider:hover img,
+		.about-us-section .swiper-slide:hover img {
+			transform: none !important;
+			-webkit-transform: none !important;
+			transition: none !important;
+			-webkit-transition: none !important;
+			scale: 1 !important;
+		}
 		</style>
 		<section class="hero-slider-active-2 hero-video-active">
 			<div class="hero-video-wrapper">
