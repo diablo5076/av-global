@@ -23196,11 +23196,14 @@ label {
 	object-fit: cover;
 	border: none;
 	border-radius: 0;
-	transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+	transform: none !important;
+	transition: none !important;
 }
 
-.about-us-section .positioned-thumb.about-slider-wrapper:hover .swiper-slide-active img {
-	transform: scale(1.03);
+.about-us-section .positioned-thumb.about-slider-wrapper:hover .swiper-slide-active img,
+.about-us-section .positioned-thumb.about-slider-wrapper:hover img,
+.about-us-section .thumb:hover .positioned-thumb img {
+	transform: none !important;
 }
 
 /* Slider Nav Buttons */
@@ -23238,7 +23241,7 @@ label {
 	color: #ffffff;
 	border-color: #d4af37;
 	box-shadow: 0 6px 22px rgba(212, 175, 55, 0.45);
-	transform: translateY(-50%) scale(1.08);
+	transform: translateY(-50%);
 }
 
 .about-slider-prev {
@@ -23279,7 +23282,7 @@ label {
 
 .about-slider-pagination .swiper-pagination-bullet:hover {
 	background: #ffffff;
-	transform: scale(1.2);
+	transform: none !important;
 }
 
 .about-slider-pagination .swiper-pagination-bullet-active {
