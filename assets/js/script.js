@@ -287,6 +287,36 @@
         animateSwiperElements(sliderActive3, sliderInit3);
     }
 
+    /*--------------------------------------------------------------
+    08.1 About Us Image Slider JS
+    --------------------------------------------------------------*/
+    if (jQuery(".about-img-slider").length > 0) {
+        let aboutSlider = new Swiper('.about-img-slider', {
+            loop: true,
+            speed: 800,
+            spaceBetween: 0,
+            slidesPerView: 1,
+            grabCursor: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            },
+            navigation: {
+                nextEl: '.about-slider-next',
+                prevEl: '.about-slider-prev',
+            },
+            pagination: {
+                el: '.about-slider-pagination',
+                clickable: true,
+            },
+            keyboard: {
+                enabled: true,
+            },
+            a11y: false
+        });
+    }
+
 
     /*--------------------------------------------------------------
     09 Camping Slider Active JS

@@ -256,8 +256,26 @@
 							data-aos-duration="1000">
 							<div class="shape-wrapped-thumb-2">
 								<div class="thumb-wrapper"></div>
-								<div class="positioned-thumb">
-									<img alt=" Anuvanshika Global Export Co" src="assets/img/bg/new-about.jpg">
+								<div class="positioned-thumb about-slider-wrapper">
+									<div class="swiper about-img-slider">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<img alt="Brass Handicrafts & Corporate Gifting - Anuvanshika Global" src="assets/img/bg/about-slide-1.webp">
+											</div>
+											<div class="swiper-slide">
+												<img alt="Luxury Brass Collections - Anuvanshika Global" src="assets/img/bg/about-slide-2.webp">
+											</div>
+										</div>
+										<!-- Slider Navigation -->
+										<button type="button" class="about-slider-btn about-slider-prev" aria-label="Previous image">
+											<i class="fa-solid fa-chevron-left"></i>
+										</button>
+										<button type="button" class="about-slider-btn about-slider-next" aria-label="Next image">
+											<i class="fa-solid fa-chevron-right"></i>
+										</button>
+										<!-- Slider Pagination -->
+										<div class="about-slider-pagination"></div>
+									</div>
 								</div>
 								<div class="shape-1"></div>
 								<div class="shape-2">
