@@ -13,12 +13,68 @@
 	<?php include 'header.php' ?>
 	<!-- header-section end -->
 	<main>
-		<!-- hero-section-2 start -->
-		<section class="hero-slider-active-2">
+		<!-- hero-section-2 start (Video Background) -->
+		<style id="hero-video-styles">
+		.hero-slider-active-2.hero-video-active {
+			position: relative !important;
+			overflow: hidden !important;
+			background: #0b1528 !important;
+		}
+		.hero-slider-active-2 .hero-video-wrapper {
+			position: absolute !important;
+			top: 0 !important;
+			left: 0 !important;
+			width: 100% !important;
+			height: 100% !important;
+			overflow: hidden !important;
+			z-index: 0 !important;
+			pointer-events: none !important;
+		}
+		.hero-slider-active-2 .hero-bg-video {
+			position: absolute !important;
+			top: 0 !important;
+			left: 0 !important;
+			width: 100% !important;
+			height: 100% !important;
+			object-fit: cover !important;
+			object-position: center center !important;
+			z-index: 0 !important;
+		}
+		.hero-slider-active-2 .hero-video-overlay {
+			position: absolute !important;
+			top: 0 !important;
+			left: 0 !important;
+			width: 100% !important;
+			height: 100% !important;
+			background: linear-gradient(180deg, rgba(11, 21, 40, 0.40) 0%, rgba(11, 21, 40, 0.52) 55%, rgba(11, 21, 40, 0.72) 100%) !important;
+			z-index: 1 !important;
+		}
+		.hero-slider-active-2 .swiper {
+			position: relative !important;
+			z-index: 2 !important;
+		}
+		.hero-slider-active-2 .hero-slide-2 {
+			background-image: none !important;
+			background-color: transparent !important;
+		}
+		.hero-slider-active-2 .hero-content-2 .title h1 {
+			text-shadow: 0 4px 18px rgba(0, 0, 0, 0.75) !important;
+		}
+		.hero-slider-active-2 .services-2 .service p {
+			text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8) !important;
+		}
+		</style>
+		<section class="hero-slider-active-2 hero-video-active">
+			<div class="hero-video-wrapper">
+				<video class="hero-bg-video" autoplay muted loop playsinline preload="auto" poster="assets/video/hero-poster.jpg">
+					<source src="assets/video/hero-video.mp4" type="video/mp4">
+				</video>
+				<div class="hero-video-overlay"></div>
+			</div>
 			<div class="swiper">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
-						<div class="hero-slide-2" style="background-image: url(assets/img/bg/1.1.jpg)">
+						<div class="hero-slide-2" style="background: transparent;">
 							<div class="container">
 								<div class="hero-content-2">
 									<div class="title" data-animation="animate__fadeInUp" data-delay="0.3s">
@@ -54,7 +110,7 @@
 						</div>
 					</div>
 					<div class="swiper-slide">
-						<div class="hero-slide-2" style="background-image: url(assets/img/bg/3.1.jpg)">
+						<div class="hero-slide-2" style="background: transparent;">
 							<div class="container">
 								<div class="hero-content-2">
 									<div class="title" data-animation="animate__fadeInUp" data-delay="0.3s">
@@ -1291,7 +1347,27 @@
 		<!-- contact-info-section end -->
 	</main>
 	<!-- footer-section start -->
-	<?php include 'footer.php' ?>
+	<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var heroVideo = document.querySelector('.hero-bg-video');
+    if (heroVideo) {
+        heroVideo.muted = true;
+        var playPromise = heroVideo.play();
+        if (playPromise !== undefined) {
+            playPromise.catch(function () {
+                var playOnUserGesture = function () {
+                    heroVideo.play();
+                    document.removeEventListener('click', playOnUserGesture);
+                    document.removeEventListener('touchstart', playOnUserGesture);
+                };
+                document.addEventListener('click', playOnUserGesture, { once: true });
+                document.addEventListener('touchstart', playOnUserGesture, { once: true });
+            });
+        }
+    }
+});
+</script>
+<?php include 'footer.php' ?>
 	<!-- footer-section end -->
 </body>
 </html>
