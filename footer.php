@@ -141,7 +141,7 @@ require_once __DIR__ . '/captcha.php';
 <script src="assets/vendor/fancybox/fancybox.umd.js"></script>
 <script src="assets/vendor/counter/purecounter.js"></script>
 <!-- Main Js -->
-<script src="assets/js/script.js?v=20261107_01"></script>
+<script src="assets/js/script.js?v=<?= filemtime('assets/js/script.js') ?>"></script>
 
 <!-- start Luxury Navy & Gold Inquiry Pop-up Modal (Section 1) -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

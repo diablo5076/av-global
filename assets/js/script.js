@@ -290,10 +290,15 @@
     /*--------------------------------------------------------------
     08.1 About Us Image Slider JS
     --------------------------------------------------------------*/
-    if (jQuery(".about-img-slider").length > 0) {
-        let aboutSlider = new Swiper('.about-img-slider', {
-            loop: true,
-            speed: 800,
+    function initAboutSlider() {
+        if (!jQuery(".about-img-slider").length) return;
+        if (window.aboutSliderInstance) {
+            try { window.aboutSliderInstance.destroy(true, true); } catch(e) {}
+        }
+        var aboutSlider = new Swiper('.about-img-slider', {
+            loop: false,
+            rewind: true,
+            speed: 700,
             spaceBetween: 0,
             slidesPerView: 1,
             grabCursor: true,
@@ -301,10 +306,6 @@
                 delay: 4000,
                 disableOnInteraction: false,
                 pauseOnMouseEnter: true,
-            },
-            navigation: {
-                nextEl: '.about-slider-next',
-                prevEl: '.about-slider-prev',
             },
             pagination: {
                 el: '.about-slider-pagination',
@@ -315,7 +316,38 @@
             },
             a11y: false
         });
+
+        window.aboutSliderInstance = aboutSlider;
+
+        // Explicit arrow button click handlers
+        jQuery(document).off('click.aboutNext', '.about-slider-next').on('click.aboutNext', '.about-slider-next', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (window.aboutSliderInstance && !window.aboutSliderInstance.destroyed) {
+                if (window.aboutSliderInstance.isEnd) {
+                    window.aboutSliderInstance.slideTo(0);
+                } else {
+                    window.aboutSliderInstance.slideNext();
+                }
+            }
+        });
+
+        jQuery(document).off('click.aboutPrev', '.about-slider-prev').on('click.aboutPrev', '.about-slider-prev', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (window.aboutSliderInstance && !window.aboutSliderInstance.destroyed) {
+                if (window.aboutSliderInstance.isBeginning) {
+                    var total = window.aboutSliderInstance.slides ? window.aboutSliderInstance.slides.length : 2;
+                    window.aboutSliderInstance.slideTo(total - 1);
+                } else {
+                    window.aboutSliderInstance.slidePrev();
+                }
+            }
+        });
     }
+
+    initAboutSlider();
+    window.initAboutSlider = initAboutSlider;
 
 
     /*--------------------------------------------------------------

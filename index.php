@@ -1434,6 +1434,9 @@
 	<!-- footer-section start -->
 	<script>
 document.addEventListener('DOMContentLoaded', function () {
+        if (window.initAboutSlider) {
+        window.initAboutSlider();
+    }
     var heroVideo = document.querySelector('.hero-bg-video');
     if (heroVideo) {
         heroVideo.muted = true;
