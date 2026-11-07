@@ -73,6 +73,7 @@
 			</div>
 			<div class="swiper">
 				<div class="swiper-wrapper">
+					<!-- Slide 1: Scene 1 (0.0s - 5.85s) Brass Handicrafts & Indian Heritage -->
 					<div class="swiper-slide">
 						<div class="hero-slide-2" style="background: transparent;">
 							<div class="container">
@@ -95,8 +96,8 @@
 										</div>
 									</div>
 									<div class="join-us" data-animation="animate__fadeInUp" data-delay="0.5s">
-										<a class='e-primary-btn has-icon' href='products.php'>
-											Discover More
+										<a class='e-primary-btn has-icon' href='brass-handicraft.php'>
+											Discover Handicrafts
 											<span class="icon-wrap">
 												<span class="icon">
 													<i class="fa-regular fa-arrow-right"></i>
@@ -109,21 +110,59 @@
 							</div>
 						</div>
 					</div>
+					<!-- Slide 2: Scene 2 (5.85s - 10.55s) Artisan Tableware & Luxury Barware -->
 					<div class="swiper-slide">
 						<div class="hero-slide-2" style="background: transparent;">
 							<div class="container">
 								<div class="hero-content-2">
 									<div class="title" data-animation="animate__fadeInUp" data-delay="0.3s">
-										<h1>Gifts That Last Forever</h1>
+										<h1>Artisan Tableware & Luxury Barware Collections</h1>
 									</div>
 									<div class="services-2" data-animation="animate__fadeInUp" data-delay="0.4s">
 										<div class="service">
 											<i class="fa-solid fa-check"></i>
-											<p>Handcrafted brass and natural marble gifts for every celebratory occasion</p>
+											<p>Hand-hammered brass chalices, goblets, bowls and fine serveware</p>
 										</div>
 										<div class="service">
 											<i class="fa-solid fa-check"></i>
-											<p>Custom packaging, bespoke engraving and custom branding on request</p>
+											<p>Food-grade finishing with antique, golden and silver plating</p>
+										</div>
+										<div class="service">
+											<i class="fa-solid fa-check"></i>
+											<p>Bespoke hospitality collections engineered for global dining</p>
+										</div>
+									</div>
+									<div class="join-us" data-animation="animate__fadeInUp" data-delay="0.5s">
+										<a class='e-primary-btn has-icon' href='table-ware.php'>
+											Explore Tableware & Barware
+											<span class="icon-wrap">
+												<span class="icon">
+													<i class="fa-regular fa-arrow-right"></i>
+													<i class="fa-regular fa-arrow-right"></i>
+												</span>
+											</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Slide 3: Scene 3 (10.55s - 15.27s) Grand Vases, Urns & Architectural Décor -->
+					<div class="swiper-slide">
+						<div class="hero-slide-2" style="background: transparent;">
+							<div class="container">
+								<div class="hero-content-2">
+									<div class="title" data-animation="animate__fadeInUp" data-delay="0.3s">
+										<h1>Grand Vases, Urns & Architectural Décor</h1>
+									</div>
+									<div class="services-2" data-animation="animate__fadeInUp" data-delay="0.4s">
+										<div class="service">
+											<i class="fa-solid fa-check"></i>
+											<p>Hand-turned brass urns, statement vases and decorative wall art</p>
+										</div>
+										<div class="service">
+											<i class="fa-solid fa-check"></i>
+											<p>Custom sizing, intricate Nakashi engraving and patina finishes</p>
 										</div>
 										<div class="service">
 											<i class="fa-solid fa-check"></i>
@@ -131,8 +170,8 @@
 										</div>
 									</div>
 									<div class="join-us" data-animation="animate__fadeInUp" data-delay="0.5s">
-										<a class='e-primary-btn has-icon' href='gifting.php'>
-											Explore Gifting Collection
+										<a class='e-primary-btn has-icon' href='vases-planters.php'>
+											View Vases & Collections
 											<span class="icon-wrap">
 												<span class="icon">
 													<i class="fa-regular fa-arrow-right"></i>

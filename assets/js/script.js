@@ -184,6 +184,9 @@
     }
 
     if (jQuery(".hero-slider-active-2").length > 0) {
+        let heroVideoEl = document.querySelector('.hero-slider-active-2 .hero-bg-video');
+        let hasHeroVideo = !!heroVideoEl;
+
         let sliderActive2 = '.hero-slider-active-2 .swiper';
         let sliderInit2 = new Swiper(sliderActive2, {
             slidesPerView: 1,
@@ -192,7 +195,7 @@
             loop: true,
             effect: 'fade',
             fadeEffect: {crossFade: true},
-            autoplay: {
+            autoplay: hasHeroVideo ? false : {
                 delay: 5000,
                 waitForTransition: true,
                 disableOnInteraction: false
@@ -209,6 +212,48 @@
         });
 
         animateSwiperElements(sliderActive2, sliderInit2);
+
+        if (hasHeroVideo && heroVideoEl) {
+            window.heroSwiper2 = sliderInit2;
+            let scenes = [
+                { start: 0.0, end: 5.85, index: 0 },
+                { start: 5.85, end: 10.55, index: 1 },
+                { start: 10.55, end: 15.3, index: 2 }
+            ];
+            let currentScene = 0;
+            let isProgrammaticSlide = false;
+
+            function getSceneIndex(t) {
+                if (t >= 10.55) return 2;
+                if (t >= 5.85) return 1;
+                return 0;
+            }
+
+            // Sync slide transitions directly with video playback
+            heroVideoEl.addEventListener('timeupdate', function () {
+                let targetScene = getSceneIndex(heroVideoEl.currentTime);
+                if (targetScene !== currentScene) {
+                    currentScene = targetScene;
+                    isProgrammaticSlide = true;
+                    sliderInit2.slideToLoop(targetScene, 600);
+                    setTimeout(function () {
+                        isProgrammaticSlide = false;
+                    }, 650);
+                }
+            });
+
+            // Bidirectional sync: when user clicks bullet or navigation, jump video to matching scene
+            sliderInit2.on('slideChangeTransitionStart', function () {
+                if (!isProgrammaticSlide) {
+                    let realIdx = sliderInit2.realIndex;
+                    if (realIdx !== undefined && scenes[realIdx]) {
+                        currentScene = realIdx;
+                        heroVideoEl.currentTime = scenes[realIdx].start;
+                        heroVideoEl.play();
+                    }
+                }
+            });
+        }
     }
 
     if (jQuery(".hero-slider-active-3").length > 0) {
